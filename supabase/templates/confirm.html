@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm Your Email - breaddie</title>
+    <style>
+      /* Reset styles */
+      body,
+      table,
+      td,
+      p,
+      a,
+      li,
+      blockquote {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* Base styles */
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #ffffff;
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: #0f0f0f;
+      }
+
+      /* Container */
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+      }
+
+      /* Header */
+      .header {
+        text-align: center;
+        padding: 40px 20px 20px;
+        background-color: #ffffff;
+      }
+
+      .logo {
+        font-size: 32px;
+        font-weight: 600;
+        color: #7a6400;
+        text-decoration: none;
+        letter-spacing: -0.025em;
+      }
+
+      /* Main content */
+      .content {
+        padding: 20px 40px 40px;
+        background-color: #ffffff;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #0f0f0f;
+        margin: 0 0 20px;
+        text-align: center;
+      }
+
+      .text {
+        font-size: 16px;
+        color: #0f0f0f;
+        margin: 0 0 20px;
+        line-height: 1.6;
+      }
+
+      /* Button */
+      .button-container {
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #0f0f0f;
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        transition: background-color 0.2s ease;
+      }
+
+      .button:hover {
+        background-color: #2d2d2d;
+      }
+
+      /* Card styling */
+      .card {
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 30px;
+        margin: 20px 0;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 20px 40px;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .footer-text {
+        font-size: 14px;
+        color: #737373;
+        margin: 0;
+      }
+
+      .footer-link {
+        color: #0f0f0f;
+        text-decoration: underline;
+      }
+
+      .footer-link:hover {
+        color: #7a6400;
+      }
+
+      /* Responsive */
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 20px !important;
+        }
+
+        .card {
+          padding: 20px !important;
+          margin: 10px 0 !important;
+        }
+
+        .title {
+          font-size: 20px !important;
+        }
+
+        .logo {
+          font-size: 28px !important;
+        }
+      }
+
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #0f0f0f !important;
+          color: #ffffff !important;
+        }
+
+        .email-container {
+          background-color: #0f0f0f !important;
+        }
+
+        .header,
+        .content {
+          background-color: #0f0f0f !important;
+        }
+
+        .card {
+          background-color: #262626 !important;
+          border-color: #404040 !important;
+        }
+
+        .title,
+        .text {
+          color: #ffffff !important;
+        }
+
+        .button {
+          background-color: #ffffff !important;
+          color: #0f0f0f !important;
+        }
+
+        .footer {
+          background-color: #171717 !important;
+          border-color: #404040 !important;
+        }
+
+        .footer-text {
+          color: #a3a3a3 !important;
+        }
+
+        .footer-link {
+          color: #ffffff !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <!-- Header -->
+      <div class="header">
+        <a href="{{ .SiteURL }}" class="logo">breaddie</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <div class="card">
+          <h1 class="title">Welcome to breaddie!</h1>
+
+          <p class="text">
+            Hi there! Thanks for signing up for breaddie, your new favorite place to discover,
+            share, and organize recipes.
+          </p>
+
+          <p class="text">
+            To get started and access all the delicious features we have to offer, please confirm
+            your email address by clicking the button below:
+          </p>
+
+          <div class="button-container">
+            <a href="{{ .ConfirmationURL }}" class="button">Confirm Email Address</a>
+          </div>
+
+          <p class="text">Once confirmed, you'll be able to:</p>
+
+          <ul style="color: #0f0f0f; margin: 0 0 20px; padding-left: 20px">
+            <li>Create and share your own recipes</li>
+            <li>Save favorites from our community</li>
+            <li>Get personalized recipe recommendations</li>
+            <li>Connect with fellow food enthusiasts</li>
+          </ul>
+
+          <p class="text">
+            If you didn't create an account with us, you can safely ignore this email.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="footer-text">
+          This email was sent from <a href="{{ .SiteURL }}" class="footer-link">breaddie</a>
+        </p>
+        <p class="footer-text">
+          If you're having trouble clicking the button, copy and paste this URL into your
+          browser:<br />
+          <a href="{{ .ConfirmationURL }}" class="footer-link">{{ .ConfirmationURL }}</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

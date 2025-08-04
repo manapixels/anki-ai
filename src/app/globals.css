@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Font families for different languages */
+  .font-japanese {
+    font-family: 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', sans-serif;
+  }
+
+  .font-korean {
+    font-family: 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  }
+
+  .font-chinese {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  a {
+    @apply text-black hover:text-base-600;
+  }
+}
+
+/* Print-specific styles */
+@media print {
+  body * {
+    visibility: hidden; /* Hide everything by default */
+  }
+
+  /* Make the recipe content area and its children visible */
+  .recipe-print-area,
+  .recipe-print-area * {
+    visibility: visible;
+  }
+
+  /* Position the recipe print area at the top of the page */
+  .recipe-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px; /* Add some padding for print */
+    font-size: 12pt; /* Adjust base font size for print */
+    line-height: 1.4;
+  }
+
+  /* Hide specific elements that should not be printed */
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Ensure links are still somewhat identifiable, but not overly distracting */
+  a,
+  a:visited {
+    color: #555 !important; /* Dark gray for links */
+    text-decoration: underline;
+  }
+
+  /* Optional: Show URL for links when printed */
+  /* 
+  a[href]:after {
+    content: " (" attr(href) ")"; 
+    font-size: 90%;
+  }
+  */
+
+  /* Control image sizes for print */
+  .recipe-print-area img {
+    max-width: 100% !important; /* Ensure images don't overflow */
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
+  /* Typography adjustments for print */
+  .recipe-print-area h1,
+  .recipe-print-area h2,
+  .recipe-print-area h3 {
+    color: black !important;
+    page-break-after: avoid; /* Try to keep headings with their content */
+  }
+
+  .recipe-print-area ul,
+  .recipe-print-area ol {
+    page-break-inside: avoid; /* Try to keep lists together */
+  }
+}

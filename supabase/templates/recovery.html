@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Your Password - breaddie</title>
+    <style>
+      /* Reset styles */
+      body,
+      table,
+      td,
+      p,
+      a,
+      li,
+      blockquote {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* Base styles */
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #ffffff;
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        line-height: 1.6;
+        color: #0f0f0f;
+      }
+
+      /* Container */
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+      }
+
+      /* Header */
+      .header {
+        text-align: center;
+        padding: 40px 20px 20px;
+        background-color: #ffffff;
+      }
+
+      .logo {
+        font-size: 32px;
+        font-weight: 600;
+        color: #7a6400;
+        text-decoration: none;
+        letter-spacing: -0.025em;
+      }
+
+      /* Main content */
+      .content {
+        padding: 20px 40px 40px;
+        background-color: #ffffff;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #0f0f0f;
+        margin: 0 0 20px;
+        text-align: center;
+      }
+
+      .text {
+        font-size: 16px;
+        color: #0f0f0f;
+        margin: 0 0 20px;
+        line-height: 1.6;
+      }
+
+      /* Button */
+      .button-container {
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #0f0f0f;
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        transition: background-color 0.2s ease;
+      }
+
+      .button:hover {
+        background-color: #2d2d2d;
+      }
+
+      /* Card styling */
+      .card {
+        background-color: #ffffff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 30px;
+        margin: 20px 0;
+      }
+
+      /* Warning box */
+      .warning {
+        background-color: #fef3c7;
+        border: 1px solid #f59e0b;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 20px 0;
+      }
+
+      .warning-text {
+        font-size: 14px;
+        color: #92400e;
+        margin: 0;
+      }
+
+      /* Security tip box */
+      .security-tip {
+        background-color: #f9f9f9;
+        border: 1px solid #6b7280;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 20px 0;
+      }
+
+      .security-tip-text {
+        font-size: 14px;
+        color: #374151;
+        margin: 0;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 20px 40px;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .footer-text {
+        font-size: 14px;
+        color: #737373;
+        margin: 0;
+      }
+
+      .footer-link {
+        color: #0f0f0f;
+        text-decoration: underline;
+      }
+
+      .footer-link:hover {
+        color: #7a6400;
+      }
+
+      /* Responsive */
+      @media only screen and (max-width: 600px) {
+        .content {
+          padding: 20px !important;
+        }
+
+        .card {
+          padding: 20px !important;
+          margin: 10px 0 !important;
+        }
+
+        .title {
+          font-size: 20px !important;
+        }
+
+        .logo {
+          font-size: 28px !important;
+        }
+      }
+
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #0f0f0f !important;
+          color: #ffffff !important;
+        }
+
+        .email-container {
+          background-color: #0f0f0f !important;
+        }
+
+        .header,
+        .content {
+          background-color: #0f0f0f !important;
+        }
+
+        .card {
+          background-color: #262626 !important;
+          border-color: #404040 !important;
+        }
+
+        .title,
+        .text {
+          color: #ffffff !important;
+        }
+
+        .button {
+          background-color: #ffffff !important;
+          color: #0f0f0f !important;
+        }
+
+        .warning {
+          background-color: #451a03 !important;
+          border-color: #ea580c !important;
+        }
+
+        .warning-text {
+          color: #fed7aa !important;
+        }
+
+        .security-tip {
+          background-color: #404040 !important;
+          border-color: #6b7280 !important;
+        }
+
+        .security-tip-text {
+          color: #d1d5db !important;
+        }
+
+        .footer {
+          background-color: #171717 !important;
+          border-color: #404040 !important;
+        }
+
+        .footer-text {
+          color: #a3a3a3 !important;
+        }
+
+        .footer-link {
+          color: #ffffff !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <!-- Header -->
+      <div class="header">
+        <a href="{{ .SiteURL }}" class="logo">breaddie</a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <div class="card">
+          <h1 class="title">Reset Your Password</h1>
+
+          <p class="text">
+            We received a request to reset the password for your breaddie account. If you made this
+            request, click the button below to create a new password:
+          </p>
+
+          <div class="button-container">
+            <a href="{{ .ConfirmationURL }}" class="button">Reset Password</a>
+          </div>
+
+          <div class="warning">
+            <p class="warning-text">
+              <strong>Security Notice:</strong> This password reset link will expire in 1 hour and
+              can only be used once. If you didn't request a password reset, you can safely ignore
+              this email.
+            </p>
+          </div>
+
+          <div class="security-tip">
+            <p class="security-tip-text">
+              <strong>Security Tip:</strong> Choose a strong password that includes a mix of
+              letters, numbers, and special characters. Avoid using personal information or common
+              passwords.
+            </p>
+          </div>
+
+          <p class="text">
+            After resetting your password, you'll be able to sign in to your breaddie account with
+            your new credentials.
+          </p>
+
+          <p class="text">
+            If you continue to have trouble accessing your account, please don't hesitate to contact
+            our support team.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p class="footer-text">
+          This password reset link was sent from
+          <a href="{{ .SiteURL }}" class="footer-link">breaddie</a>
+        </p>
+        <p class="footer-text">
+          If you're having trouble clicking the button, copy and paste this URL into your
+          browser:<br />
+          <a href="{{ .ConfirmationURL }}" class="footer-link">{{ .ConfirmationURL }}</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
